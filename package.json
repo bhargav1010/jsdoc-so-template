@@ -1,0 +1,22 @@
+{
+  "name": "jsdoc-so-template",
+  "version": "1.0.0",
+  "description": "A custom template to generate single html file as ouput.",
+  "main": "publish.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhargav1010/jsdoc-so-template.git"
+  },
+  "keywords": [
+    "jct"
+  ],
+  "author": "bhargav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhargav1010/jsdoc-so-template/issues"
+  },
+  "homepage": "https://github.com/bhargav1010/jsdoc-so-template#readme"
+}
