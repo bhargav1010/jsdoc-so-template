@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?js if (!env.conf.docdash) { env.conf.docdash = {};} ?>
+    <?js if (!env.conf.jsdocSoTemplate) { env.conf.jsdocSoTemplate = {};} ?>
     <meta charset="utf-8">
-    <title><?js= title ?> - <?js= ((env.conf.docdash.meta && env.conf.docdash.meta.title) || "Documentation") ?></title>
-    <?js if (env.conf.docdash.meta) { ?>
-    <?js if (env.conf.docdash.meta.description) { ?><meta name="description" content="<?js= env.conf.docdash.meta.description ?>" /><?js } ?>
-    <?js if (env.conf.docdash.meta.keyword) { ?>
-        <meta name="keywords" content="<?js= env.conf.docdash.meta.keyword ?>" />
-        <meta name="keyword" content="<?js= env.conf.docdash.meta.keyword ?>" />
+    <title><?js= title ?> - <?js= ((env.conf.jsdocSoTemplate.meta && env.conf.jsdocSoTemplate.meta.title) || "Documentation") ?></title>
+    <?js if (env.conf.jsdocSoTemplate.meta) { ?>
+    <?js if (env.conf.jsdocSoTemplate.meta.description) { ?><meta name="description" content="<?js= env.conf.jsdocSoTemplate.meta.description ?>" /><?js } ?>
+    <?js if (env.conf.jsdocSoTemplate.meta.keyword) { ?>
+        <meta name="keywords" content="<?js= env.conf.jsdocSoTemplate.meta.keyword ?>" />
+        <meta name="keyword" content="<?js= env.conf.jsdocSoTemplate.meta.keyword ?>" />
     <?js } ?>
     <?js } ?>
-    <?js if (env.conf.docdash.openGraph) { ?>
-    <meta property="og:title" content="<?js= env.conf.docdash.openGraph.title ?>"/>
-    <meta property="og:type" content="<?js= env.conf.docdash.openGraph.type ?>"/>
-    <meta property="og:image" content="<?js= env.conf.docdash.openGraph.image ?>"/>
-    <?js if (env.conf.docdash.openGraph.site_name) { ?><meta property="og:site_name" content="<?js= env.conf.docdash.openGraph.site_name ?>"/><?js } ?>
-    <meta property="og:url" content="<?js= env.conf.docdash.openGraph.url ?>"/>
+    <?js if (env.conf.jsdocSoTemplate.openGraph) { ?>
+    <meta property="og:title" content="<?js= env.conf.jsdocSoTemplate.openGraph.title ?>"/>
+    <meta property="og:type" content="<?js= env.conf.jsdocSoTemplate.openGraph.type ?>"/>
+    <meta property="og:image" content="<?js= env.conf.jsdocSoTemplate.openGraph.image ?>"/>
+    <?js if (env.conf.jsdocSoTemplate.openGraph.site_name) { ?><meta property="og:site_name" content="<?js= env.conf.jsdocSoTemplate.openGraph.site_name ?>"/><?js } ?>
+    <meta property="og:url" content="<?js= env.conf.jsdocSoTemplate.openGraph.url ?>"/>
     <?js } ?>
 
     <script>
@@ -34,7 +34,7 @@
     scrollToNavItem();
     </script>
 
-    <?js if (env.conf.docdash.commonNav) { ?>
+    <?js if (env.conf.jsdocSoTemplate.commonNav) { ?>
     <script>
     if (typeof fetch === 'function') {
     const init = () => {
@@ -62,7 +62,7 @@
         })
         .catch(error => console.error(error))
     } else {
-    console.error(Error('Browser too old to display commonNav (remove commonNav docdash option)'))
+    console.error(Error('Browser too old to display commonNav (remove commonNav jsdocSoTemplate option)'))
     }
     </script>
     <?js } ?>
@@ -810,11 +810,11 @@
 
 <label for="nav-trigger" class="overlay"></label>
 
-<nav <?js if (env.conf.docdash.wrap) { ?>class="wrap"<?js } ?>>
-    <?js if (env.conf.docdash.search) { ?>
+<nav <?js if (env.conf.jsdocSoTemplate.wrap) { ?>class="wrap"<?js } ?>>
+    <?js if (env.conf.jsdocSoTemplate.search) { ?>
     <input type="text" id="nav-search" placeholder="Search" />
     <?js } ?>
-    <?js if (!env.conf.docdash.commonNav) { ?>
+    <?js if (!env.conf.jsdocSoTemplate.commonNav) { ?>
     <?js= this.nav ?>
     <?js } ?>
 </nav>
@@ -826,12 +826,12 @@
 
     <?js= content ?>
     
-    <?js if (env.conf.docdash.disqus) { ?>
+    <?js if (env.conf.jsdocSoTemplate.disqus) { ?>
     <div id="disqus_thread"></div>
     <script>
     (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
-    s.src = '//<?js= env.conf.docdash.disqus ?>.disqus.com/embed.js';
+    s.src = '//<?js= env.conf.jsdocSoTemplate.disqus ?>.disqus.com/embed.js';
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
     })();
@@ -873,7 +873,7 @@
     }
 })();
 </script>
-<?js if (env.conf.docdash.search) { ?>
+<?js if (env.conf.jsdocSoTemplate.search) { ?>
 <script>
 
 var searchAttr = 'data-search-mode';
@@ -976,7 +976,7 @@ document.getElementById("nav-search").addEventListener("keyup", function(event) 
 });
 </script>
 <?js } ?>
-<?js if (env.conf.docdash.collapse) { ?>
+<?js if (env.conf.jsdocSoTemplate.collapse) { ?>
 <script>
 function hideAllButCurrent(){
     //by default all submenut items are hidden
@@ -1044,7 +1044,7 @@ if (typeof fetch === 'function') {
       })
       .catch(error => console.error(error))
   } else {
-    console.error(Error('Browser too old to display commonNav (remove commonNav docdash option)'))
+    console.error(Error('Browser too old to display commonNav (remove commonNav jsdocSoTemplate option)'))
   }
   
   if (typeof fetch === 'function') {
@@ -1073,7 +1073,7 @@ if (typeof fetch === 'function') {
       })
       .catch(error => console.error(error))
   } else {
-    console.error(Error('Browser too old to display commonNav (remove commonNav docdash option)'))
+    console.error(Error('Browser too old to display commonNav (remove commonNav jsdocSoTemplate option)'))
   }
   
   /*global document */
@@ -1221,14 +1221,14 @@ document.getElementById("nav-search").addEventListener("keyup", function(event) 
 });
 </script>
 <?js } ?>
-<?js if (env.conf.docdash.scripts && env.conf.docdash.scripts.length) {
-    for(var i = 0; i < env.conf.docdash.scripts.length; i++){
-        if (env.conf.docdash.scripts[i].indexOf(".css") != -1) {
+<?js if (env.conf.jsdocSoTemplate.scripts && env.conf.jsdocSoTemplate.scripts.length) {
+    for(var i = 0; i < env.conf.jsdocSoTemplate.scripts.length; i++){
+        if (env.conf.jsdocSoTemplate.scripts[i].indexOf(".css") != -1) {
     ?>
     <?js
         } else {
     ?>
-    <script src="<?js= env.conf.docdash.scripts[i] ?>"></script>
+    <script src="<?js= env.conf.jsdocSoTemplate.scripts[i] ?>"></script>
     <?js
         }
     }
