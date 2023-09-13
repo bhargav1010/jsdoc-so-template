@@ -1,6 +1,6 @@
 {
   "name": "jsdoc-so-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A custom template to generate single html file as ouput.",
   "main": "publish.js",
   "scripts": {
