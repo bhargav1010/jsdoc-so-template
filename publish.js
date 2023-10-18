@@ -403,8 +403,9 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
                         // var navItemLink = linkto(method.longname, method.name);
 
                         navItem += "<li data-type='method'";
-                        if(jsdocSoTemplate.collapse)
+                        if(jsdocSoTemplate.collapse){
                             navItem += " style='display: none;'";
+                        }
                         navItem += ">";
                         navItem += navItemLink;
                         navItem += "</li>";
@@ -757,10 +758,28 @@ exports.publish = function(taffyData, opts, tutorials) {
     var files = find({kind: 'file'});
     var packages = find({kind: 'package'});
 
-    generate('', 'Home',
-        packages.concat(
-            [{kind: 'mainpage', readme: opts.readme, longname: (opts.mainpagetitle) ? opts.mainpagetitle : 'Main Page'}]
-        ).concat(files),
+    // generate('', 'Home',
+    //     packages.concat(
+    //         [{kind: 'mainpage', readme: opts.readme, longname: (opts.mainpagetitle) ? opts.mainpagetitle : 'Main Page'}]
+    //     ).concat(files),
+    // indexUrl);
+
+    generate('', 'Styles',
+    packages.concat(
+        [{kind: 'styles', readme: opts.readme, longname: (opts.mainpagetitle) ? opts.mainpagetitle : 'Styles'}]
+    ).concat(files),
+    indexUrl);
+
+    generate('', 'Nav',
+    packages.concat(
+        [{kind: 'nav', readme: opts.readme, longname: (opts.mainpagetitle) ? opts.mainpagetitle : 'Nav'}]
+    ).concat(files),
+    indexUrl);
+
+    generate('', 'Script',
+    packages.concat(
+        [{kind: 'script', readme: opts.readme, longname: (opts.mainpagetitle) ? opts.mainpagetitle : 'script'}]
+    ).concat(files),
     indexUrl);
 
     // common nav generation, no need for templating here, we already have full html
