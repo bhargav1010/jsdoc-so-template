@@ -2,6 +2,7 @@
 Add this jsdoc-config.json file to your js-files directory:
 
 jsdoc-config.json:
+```
 {
     "tags": {
         "allowUnknownTags": true
@@ -30,3 +31,4 @@ jsdoc-config.json:
         "search": true //enables search in the documentation
     }
 }
+```
